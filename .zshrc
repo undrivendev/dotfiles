@@ -19,4 +19,14 @@ if [[ -e ~/dev ]]; then
     alias cdev="cd ~/dev"
 fi
 
-eval $(thefuck --alias)
+if command -v fuck &> /dev/null; then
+  eval $(thefuck --alias)
+fi
+
+# start shell on tmux by default
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
+
+
