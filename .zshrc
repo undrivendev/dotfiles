@@ -1,11 +1,9 @@
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+ZSH=/usr/share/oh-my-zsh/
+ZSH_THEME="robbyrussell"
+plugins=(git)
+
+
+# User configuration
 
 # start ssh-agent at startup
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
@@ -28,5 +26,9 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
-
+source $ZSH/oh-my-zsh.sh
