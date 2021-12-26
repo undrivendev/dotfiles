@@ -16,7 +16,7 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 fi
 
 if [[ -e ~/dev ]]; then
-    alias cdev="cd ~/dev"
+    alias cdd="cd ~/dev"
 fi
 
 if command -v fuck &> /dev/null; then
