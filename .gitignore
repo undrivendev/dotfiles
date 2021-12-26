@@ -1,5 +1,7 @@
 *
 !.gitignore
+!.gitmodules
 !.tmux
 !.zshrc
 !.p10k.zsh
+!.oh-my-zsh-custom/**

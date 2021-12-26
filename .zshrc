@@ -9,6 +9,10 @@ ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 
+ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
+if [[ ! -d $ZSH_CUSTOM ]]; then
+  mkdir $ZSH_CUSTOM
+fi
 
 # User configuration
 
