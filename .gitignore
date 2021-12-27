@@ -1,7 +1,10 @@
 *
 !.gitignore
-!.gitmodules
-!.tmux
+!.path
+!.bash_prompt
+!.exports
+!.aliases
+!.functions
+!.tmux.conf
 !.zshrc
 !.p10k.zsh
-!.oh-my-zsh-custom/**

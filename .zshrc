@@ -5,18 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-ZSH=/usr/share/oh-my-zsh/
-ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git)
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
-ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
-if [[ ! -d $ZSH_CUSTOM ]]; then
-  mkdir $ZSH_CUSTOM
-fi
-
-# User configuration
-
-# start ssh-agent at startup
+# ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
@@ -24,17 +21,16 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-if [[ -e ~/dev ]]; then
-    alias cdd="cd ~/dev"
-fi
+# zsh
+ZSH=/usr/share/oh-my-zsh/
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(git tmux)
 
-if command -v fuck &> /dev/null; then
-  eval $(thefuck --alias)
-fi
+ZSH_TMUX_AUTOSTART=true
 
-# start shell on tmux by default
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
+if [[ ! -d $ZSH_CUSTOM ]]; then
+  mkdir $ZSH_CUSTOM
 fi
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
