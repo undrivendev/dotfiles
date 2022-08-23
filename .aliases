@@ -2,6 +2,6 @@ if [[ -e ~/dev ]]; then
     alias cdd="cd ~/dev"
 fi
 
-if command -v fuck &> /dev/null; then
-  eval $(thefuck --alias)
+if command -v thefuck &> /dev/null; then
+  eval $(thefuck --alias ff)
 fi
