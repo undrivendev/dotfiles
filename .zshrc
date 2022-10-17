@@ -8,7 +8,7 @@ fi
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{path,bash_prompt,exports,aliases,functions,pyenv-init,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -22,16 +22,11 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 fi
 
 # zsh
-ZSH=/usr/share/oh-my-zsh/
+ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions tmux)
 
 ZSH_TMUX_AUTOSTART=true
-
-ZSH_CUSTOM="$HOME/.oh-my-zsh-custom"
-if [[ ! -d $ZSH_CUSTOM ]]; then
-  mkdir $ZSH_CUSTOM
-fi
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
