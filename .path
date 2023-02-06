@@ -1,0 +1,1 @@
+export PATH="$PATH:/home/ldv/.local/bin:/home/ldv/.local/share/JetBrains/Toolbox/scripts"
