@@ -1,2 +1,5 @@
 # needed to fix GPG commit signing
 export GPG_TTY=$(tty)
+
+export EDITOR=/bin/nvim
+
