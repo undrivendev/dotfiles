@@ -1,1 +1,1 @@
-command -v thefuck &> /dev/null && eval $(thefuck --alias ff --enable-experimental-instant-mode)
+command -v thefuck &> /dev/null && eval $(thefuck --alias ff)
