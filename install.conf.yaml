@@ -15,6 +15,7 @@
     # Apps
     ~/.ssh-agent: ssh-agent
     ~/.thefuck: thefuck
+    ~/.pyenv-init: pyenv-init
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
