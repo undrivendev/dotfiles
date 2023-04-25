@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    # Shell stuff
+    ~/.aliases: aliases
+    ~/.exports: exports
+    ~/.p10k.zsh: p10k.zsh
+    ~/.path: path
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
+    # Apps
+    ~/.ssh-agent: ssh-agent
+    ~/.thefuck: thefuck
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
