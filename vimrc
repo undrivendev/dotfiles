@@ -1,6 +1,8 @@
 "" Base Settings
 "" ========================================================
 
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
 set number relativenumber
 set scrolloff=10
 set showmode
