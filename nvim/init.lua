@@ -1,5 +1,5 @@
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.cmd([[
-nnoremap <SPACE> <Nop>
 source ~/.vimrc
 ]])
 
@@ -18,17 +18,26 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- plugins
+vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 require("lazy").setup({
-  "folke/which-key.nvim",
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    dependencies = {
-	"nvim-lua/plenary.nvim",
-	"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-	"MunifTanjim/nui.nvim",
-    },
-  }
+	  "folke/which-key.nvim",
+	  config = function ()
+		  require('which-key').setup {}
+	  end,
+  },
+  {
+	  "nvim-neo-tree/neo-tree.nvim",
+	  version = "*",
+	  dependencies = {
+		  "nvim-lua/plenary.nvim",
+		  "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+		  "MunifTanjim/nui.nvim",
+	  },
+	  config = function ()
+		  require('neo-tree').setup {}
+	  end,
+  },
 })
 
 -- Keymaps
