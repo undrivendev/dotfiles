@@ -2,4 +2,5 @@
 export GPG_TTY=$(tty)
 
 export EDITOR=/bin/nvim
+export VISUAL=/bin/nvim
 

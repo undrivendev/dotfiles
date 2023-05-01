@@ -16,6 +16,10 @@
     ~/.ssh-agent: ssh-agent
     ~/.thefuck: thefuck
     ~/.pyenv-init: pyenv-init
+    # Vim
+    ~/.vimrc: vimrc
+    ~/.ideavimrc: ideavimrc
+    ~/.config/nvim: nvim
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

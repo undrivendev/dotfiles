@@ -1,0 +1,29 @@
+source ~/.vimrc
+
+
+"" Plugin Settings
+"" ========================================================
+
+set highlightedyank
+set nerdtree
+set easymotion
+set which-key
+
+
+"" Leader commands
+"" ========================================================
+
+" Comment lines
+map <leader>c <action>(CommentByLineComment)
+
+" Open NERDTree (use q to exit)
+map <leader>t :NERDTreeToggle<CR>
+
+map <leader>z <action>(ToggleZenMode)
+
+" Go to code
+nmap <leader>gd <Action>(GotoDeclaration)
+nmap <leader>gy <Action>(GotoTypeDeclaration)
+nmap <leader>gi <Action>(GotoImplementation)
+nmap <leader>gu <Action>(ShowUsages)
+nmap <leader>gt <Action>(GotoTest)
