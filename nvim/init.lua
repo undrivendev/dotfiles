@@ -21,6 +21,24 @@ vim.opt.rtp:prepend(lazypath)
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 require("lazy").setup({
   {
+	  "folke/tokyonight.nvim",
+	  config = function()
+                  require("tokyonight").setup({
+			  style = 'night'
+		  })
+	  end,
+  },
+  {
+	  "nvim-lualine/lualine.nvim",
+	  config = function()
+		  require('lualine').setup {
+			  options = {
+				  theme = 'tokyonight'
+			  }
+		  }
+	  end,
+  },
+  {
 	  "folke/which-key.nvim",
 	  config = function()
 		  vim.o.timeout = true
@@ -47,6 +65,9 @@ require("lazy").setup({
 	  end,
   },
 })
+
+-- Color scheme
+vim.cmd([[colorscheme tokyonight]])
 
 -- Keymaps
 vim.cmd([[
