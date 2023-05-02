@@ -22,8 +22,10 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 require("lazy").setup({
   {
 	  "folke/which-key.nvim",
-	  config = function ()
-		  require('which-key').setup {}
+	  config = function()
+		  vim.o.timeout = true
+		  vim.o.timeoutlen = 300
+                  require("which-key").setup({})
 	  end,
   },
   {
@@ -35,7 +37,13 @@ require("lazy").setup({
 		  "MunifTanjim/nui.nvim",
 	  },
 	  config = function ()
-		  require('neo-tree').setup {}
+		  require('neo-tree').setup()
+	  end,
+  },
+  {
+	  "phaazon/hop.nvim",
+	  config = function ()
+		  require('hop').setup()
 	  end,
   },
 })
@@ -43,4 +51,5 @@ require("lazy").setup({
 -- Keymaps
 vim.cmd([[
 nnoremap <leader>t :Neotree toggle<cr>
+nnoremap <leader><leader>w :HopWord<cr>
 ]])

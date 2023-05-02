@@ -19,9 +19,6 @@ set incsearch
 set hlsearch
 
 
-set notimeout
-
-
 "" Key mappings
 "" ========================================================
 
