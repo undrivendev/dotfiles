@@ -1,4 +1,3 @@
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.cmd([[
 source ~/.vimrc
 ]])
@@ -21,19 +20,24 @@ vim.opt.rtp:prepend(lazypath)
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 require("lazy").setup({
   {
-	  "folke/tokyonight.nvim",
+	  "sainnhe/sonokai",
 	  config = function()
-                  require("tokyonight").setup({
-			  style = 'night'
-		  })
+                  vim.cmd([[
+	          let g:sonokai_style = 'shusia'
+		  let g:sonokai_better_performance = 1
+                  colorscheme sonokai
+		  ]])
 	  end,
   },
   {
 	  "nvim-lualine/lualine.nvim",
+	  dependencies = { 
+		  "sainnhe/sonokai",
+	  },
 	  config = function()
 		  require('lualine').setup {
 			  options = {
-				  theme = 'tokyonight'
+				  theme = 'sonokai'
 			  }
 		  }
 	  end,
@@ -66,8 +70,6 @@ require("lazy").setup({
   },
 })
 
--- Color scheme
-vim.cmd([[colorscheme tokyonight]])
 
 -- Keymaps
 vim.cmd([[

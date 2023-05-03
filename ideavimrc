@@ -5,12 +5,21 @@ source ~/.vimrc
 "" ========================================================
 
 set highlightedyank
+
 set nerdtree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
 
 set easymotion
 set notimeout
 
 set which-key
+
+
+"" IdeaVim options
+"" ========================================================
+
+set ideajoin
 
 
 "" Leader commands
@@ -19,9 +28,10 @@ set which-key
 " Comment lines
 map <leader>c <action>(CommentByLineComment)
 
-" Open NERDTree (use q to exit)
+" NERDTree
 map <leader>t :NERDTreeToggle<CR>
 
+" Windows
 map <leader>z <action>(ToggleZenMode)
 
 " Go to code
@@ -30,3 +40,7 @@ nmap <leader>gy <Action>(GotoTypeDeclaration)
 nmap <leader>gi <Action>(GotoImplementation)
 nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
+
+" Tab navigation
+nmap <leader>h <Action>(PreviousTab)
+nmap <leader>l <Action>(NextTab)

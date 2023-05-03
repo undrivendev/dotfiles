@@ -8,6 +8,12 @@ set scrolloff=10
 set showmode
 set showcmd
 set visualbell
+set history=1000
+set nrformats-=octal
+
+if has('termguicolors')
+  set termguicolors
+endif
 
 " Use system clipboard
 set clipboard+=unnamed
@@ -28,4 +34,5 @@ inoremap jk <Esc>
 "" Leader Key
 "" ========================================================
 
+noremap <Space> <Nop>
 let mapleader = " "
