@@ -1,8 +1,8 @@
 M = {}
 
 M.load_keymaps = function()
-	-- Keymaps
-	vim.cmd([[
+    -- Keymaps
+    vim.cmd([[
 nnoremap <leader>t :Neotree toggle<cr>
 nnoremap <leader><leader>w :HopWord<cr>
 ]])
