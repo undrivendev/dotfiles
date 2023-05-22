@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v0.17.1
+    hooks:
+      - id: stylua
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-ast
+      - id: check-yaml
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: fix-encoding-pragma
+        args: ["--remove"]
+
