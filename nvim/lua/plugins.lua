@@ -22,25 +22,22 @@ M.load_plugins = function()
             lazy = false,
         },
         {
-            "sainnhe/sonokai",
-            config = function()
-                vim.cmd([[
-	          let g:sonokai_style = 'shusia'
-		  let g:sonokai_better_performance = 1
-                  colorscheme sonokai
-		  ]])
-            end,
+            "catppuccin/nvim",
+            name = "catppuccin",
             lazy = false,
+            config = function()
+                vim.cmd([[colorscheme catppuccin-mocha]])
+            end,
         },
         {
             "nvim-lualine/lualine.nvim",
             dependencies = {
-                "sainnhe/sonokai",
+                "catppuccin/nvim",
             },
             config = function()
                 require("lualine").setup({
                     options = {
-                        theme = "sonokai",
+                        theme = "catppuccin-mocha",
                     },
                 })
             end,
