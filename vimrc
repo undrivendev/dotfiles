@@ -29,6 +29,7 @@ set hlsearch
 "" ========================================================
 
 inoremap jk <Esc>
+nnoremap Y y$
 
 
 "" Leader Key
