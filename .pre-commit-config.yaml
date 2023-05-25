@@ -3,6 +3,27 @@ repos:
     rev: v0.17.1
     hooks:
       - id: stylua
+  - repo: https://github.com/oxsecurity/megalinter
+    rev: v6.22.2
+    hooks:
+      - id: megalinter-incremental
+        stages:
+          - commit
+        args:
+          - mega-linter-runner
+          - --flavor
+          - "documentation"
+          - --containername
+          - "megalinter-incremental"
+          - --remove-container
+          - --fix
+          - --env
+          - "'APPLY_FIXES=all'"
+          - --env
+          - "'CLEAR_REPORT_FOLDER=true'"
+          - --env
+          - "'LOG_LEVEL=warning'"
+          - --filesonly
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:

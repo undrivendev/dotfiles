@@ -1,0 +1,3 @@
+(setq-default dotspacemacs-configuration-layers '(
+  (org :variables
+       org-enable-roam-support t)))

@@ -1,10 +1,6 @@
 ; EditorConfig to support per-solution formatting.
 ; Use the EditorConfig VS add-in to make this work.
 ; http://editorconfig.org/
-;
-; Here are some resources for what's supported for .NET/C#
-; https://kent-boogaart.com/blog/editorconfig-reference-for-c-developers
-; https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference?view=vs-2017
 
 ; This is the default for the codeline.
 root = true
