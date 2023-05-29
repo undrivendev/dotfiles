@@ -6,3 +6,4 @@ command -v paru &> /dev/null && alias yay=paru
 
 alias vim=nvim
 alias vi=nvim
+alias emacs="emacsclient -c -a 'emacs'"

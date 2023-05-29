@@ -22,7 +22,6 @@
     ~/.config/nvim: nvim
     # Spacemacs
     ~/.spacemacs: spacemacs
-    ~/dotspacemacs: dotspacemacs
     ~/.config/plasma-workspace: plasma-workspace
 
 - shell:

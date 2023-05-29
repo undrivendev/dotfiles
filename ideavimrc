@@ -14,6 +14,8 @@ set easymotion
 set notimeout
 
 set which-key
+set notimeout
+let g:WhichKey_ShowVimActions = "true"
 
 
 "" IdeaVim options
@@ -22,25 +24,7 @@ set which-key
 set ideajoin
 
 
-"" Leader commands
+"" Spacemacs
 "" ========================================================
 
-" Comment lines
-map <leader>c <action>(CommentByLineComment)
-
-" NERDTree
-map <leader>t :NERDTreeToggle<CR>
-
-" Windows
-map <leader>z <action>(ToggleZenMode)
-
-" Go to code
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gy <Action>(GotoTypeDeclaration)
-nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gu <Action>(ShowUsages)
-nmap <leader>gt <Action>(GotoTest)
-
-" Tab navigation
-nmap <leader>h <Action>(PreviousTab)
-nmap <leader>l <Action>(NextTab)
+source ~/.intellimacs/spacemacs.vim
