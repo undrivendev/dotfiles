@@ -25,15 +25,16 @@ set incsearch
 set hlsearch
 
 
+"" Leader Key
+"" ========================================================
+
+noremap <Space> <Nop>
+let mapleader = " "
+
+
 "" Key mappings
 "" ========================================================
 
 inoremap jk <Esc>
 nnoremap Y y$
 
-
-"" Leader Key
-"" ========================================================
-
-noremap <Space> <Nop>
-let mapleader = " "
