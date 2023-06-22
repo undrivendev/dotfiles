@@ -1,13 +1,13 @@
 {
-  "catppuccin": { "branch": "main", "commit": "e86aeb8ca0f03e97192074fba9dc6c836f953a83" },
+  "catppuccin": { "branch": "main", "commit": "506a4aa13443e0104ea49b99947cc09488d0791d" },
   "hop.nvim": { "branch": "master", "commit": "03f0434869f1f38868618198b5f4f2ab6d39aef2" },
-  "lazy.nvim": { "branch": "main", "commit": "9223c1aa200a8c329053f9e2ca0980ead56059d6" },
+  "lazy.nvim": { "branch": "main", "commit": "b7043f2983d7aead78ca902f3f2053907081859a" },
   "lualine.nvim": { "branch": "master", "commit": "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9" },
-  "neo-tree.nvim": { "branch": "v2.x", "commit": "8c89efb93b8383666a6f989762c2f610f5f2c930" },
-  "nui.nvim": { "branch": "main", "commit": "2b2732528e4a79eb8542568bd51d25f710395bd6" },
-  "nvim": { "branch": "main", "commit": "e86aeb8ca0f03e97192074fba9dc6c836f953a83" },
-  "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268" },
-  "plenary.nvim": { "branch": "master", "commit": "499e0743cf5e8075cd32af68baa3946a1c76adf1" },
+  "neo-tree.nvim": { "branch": "v2.x", "commit": "8324fd52f7880bf17142f56b45f544d64eff5ac9" },
+  "nui.nvim": { "branch": "main", "commit": "d146966a423e60699b084eeb28489fe3b6427599" },
+  "nvim": { "branch": "main", "commit": "506a4aa13443e0104ea49b99947cc09488d0791d" },
+  "nvim-web-devicons": { "branch": "master", "commit": "14b3a5ba63b82b60cde98d0a40319d80f25e8301" },
+  "plenary.nvim": { "branch": "master", "commit": "36aaceb6e93addd20b1b18f94d86aecc552f30c4" },
   "vim-tmux-navigator": { "branch": "master", "commit": "cdd66d6a37d991bba7997d593586fc51a5b37aa8" },
-  "which-key.nvim": { "branch": "main", "commit": "e271c28118998c93a14d189af3395812a1aa646c" }
+  "which-key.nvim": { "branch": "main", "commit": "d871f2b664afd5aed3dc1d1573bef2fb24ce0484" }
 }

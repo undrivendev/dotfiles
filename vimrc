@@ -1,6 +1,7 @@
 "" Base Settings
 "" ========================================================
 
+syntax on
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 set number relativenumber
@@ -10,6 +11,7 @@ set showcmd
 set visualbell
 set history=1000
 set nrformats-=octal
+set noswapfile
 
 if has('termguicolors')
   set termguicolors

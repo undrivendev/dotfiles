@@ -49,15 +49,21 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      (org :variables
+          org-directory (expand-file-name "~/dev/docs/org")
+          org-default-notes-file (concat org-directory "/inbox.org")
+
+	  ;;org-roam
           org-enable-roam-support t
-          org-enable-roam-ui t)
+          org-enable-roam-ui t
+          org-roam-directory (concat org-directory "/roam"))
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
+     spell-checking
      ;; syntax-checking
      ;; version-control
-     neotree)
+     neotree
+     themes-megapack)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -558,6 +564,8 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  (setq-default
+   dotspacemacs-themes '(doom-dracula))
 )
 
 
