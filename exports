@@ -4,3 +4,4 @@ export GPG_TTY=$(tty)
 export EDITOR=/bin/nvim
 export VISUAL=/bin/nvim
 
+export PIP_REQUIRE_VIRTUALENV=true
