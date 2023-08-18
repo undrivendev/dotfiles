@@ -1,0 +1,7 @@
+[misc]
+disable = ["pip3"]
+no_self_update = true
+
+[linux]
+arch_package_manager = "paru"
+
