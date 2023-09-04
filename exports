@@ -5,3 +5,4 @@ export EDITOR=/bin/nvim
 export VISUAL=/bin/nvim
 
 export PIP_REQUIRE_VIRTUALENV=true
+export ZSH=$HOME/.oh-my-zsh
