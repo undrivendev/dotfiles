@@ -37,6 +37,5 @@ let mapleader = " "
 "" Key mappings
 "" ========================================================
 
-inoremap jk <Esc>
 nnoremap Y y$
 
