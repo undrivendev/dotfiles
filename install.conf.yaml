@@ -23,8 +23,10 @@
     # Spacemacs
     ~/.spacemacs: spacemacs
     ~/.config/plasma-workspace: plasma-workspace
+
     ~/.config/topgrade.toml: topgrade.toml
     ~/.config/pypoetry/config.toml: poetry-config.toml
+    ~/.nvm-init: nvm-init
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
