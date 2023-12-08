@@ -6,4 +6,3 @@ export VISUAL=/bin/nvim
 
 export PIP_REQUIRE_VIRTUALENV=true
 export ZSH=$HOME/.oh-my-zsh
-export NPM_CONFIG_PREFIX=$HOME/.local
