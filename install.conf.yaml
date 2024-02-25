@@ -21,7 +21,6 @@
     ~/.ideavimrc: ideavimrc
     ~/.config/nvim: nvim
     # Spacemacs
-    ~/.spacemacs: spacemacs
     ~/.config/plasma-workspace: plasma-workspace
 
     ~/.config/topgrade.toml: topgrade.toml
