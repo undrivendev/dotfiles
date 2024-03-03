@@ -11,6 +11,7 @@ let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
 
 set easymotion
+map s <Plug>(easymotion-bd-f)
 
 set which-key
 set notimeout
@@ -22,8 +23,3 @@ let g:WhichKey_ShowVimActions = "true"
 
 set ideajoin
 
-
-"" Spacemacs
-"" ========================================================
-
-source ~/.intellimacs/spacemacs.vim
