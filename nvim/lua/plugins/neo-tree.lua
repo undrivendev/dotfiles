@@ -1,4 +1,4 @@
-M = {
+local M = {
   "nvim-neo-tree/neo-tree.nvim",
   version = "*",
   dependencies = {

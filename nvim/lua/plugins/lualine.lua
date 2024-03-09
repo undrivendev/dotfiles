@@ -1,4 +1,4 @@
-M = {
+local M = {
   "nvim-lualine/lualine.nvim",
   dependencies = {
     "catppuccin/nvim",

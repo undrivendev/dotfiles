@@ -1,4 +1,4 @@
-M = {
+local M = {
   "folke/which-key.nvim",
   config = function()
     vim.o.timeout = true

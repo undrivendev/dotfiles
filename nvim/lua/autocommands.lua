@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 function M.load_autocommands()
   -- https://neovim.io/doc/user/lua-guide.html#lua-guide-autocommand-create
 

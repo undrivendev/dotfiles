@@ -1,6 +1,6 @@
-M = {}
+local M = {}
 
-M.set_keymap = vim.api.nvim_set_keymap
+M.set_keymap = vim.keymap.set
 
 local function _map(mode, shortcut, command)
   M.set_keymap(mode, shortcut, command, { noremap = true, silent = true })
@@ -29,7 +29,5 @@ end
 function M.tmap(shortcut, command)
   _map("t", shortcut, command)
 end
-
-function M.load_keymaps() end
 
 return M
