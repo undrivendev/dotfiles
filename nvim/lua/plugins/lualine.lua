@@ -4,13 +4,11 @@ M = {
     "catppuccin/nvim",
     "nvim-tree/nvim-web-devicons",
   },
-  config = function()
-    require("lualine").setup({
-      options = {
-        theme = "catppuccin-mocha",
-      },
-    })
-  end,
+  opts = {
+    options = {
+      theme = "catppuccin-mocha",
+    },
+  },
 }
 
 return M
