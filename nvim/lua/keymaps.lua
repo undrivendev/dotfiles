@@ -30,11 +30,6 @@ function M.tmap(shortcut, command)
   _map("t", shortcut, command)
 end
 
-function M.load_keymaps()
-  M.nmap("<leader>ft", "<cmd>Neotree toggle<CR>")
-
-  -- Hop
-  M.map("s", "<cmd>HopChar1<CR>")
-end
+function M.load_keymaps() end
 
 return M
