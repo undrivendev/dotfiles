@@ -12,7 +12,7 @@ local M = {
     require("neo-tree").setup()
     vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
-    k.nmap("<leader>ft", "<cmd>Neotree toggle<CR>")
+    k.nmap("<C-n>", "<cmd>Neotree toggle<CR>")
   end,
 }
 
