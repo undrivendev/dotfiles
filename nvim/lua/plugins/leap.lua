@@ -5,7 +5,7 @@ local M = {
   config = function()
     local k = require("../keymaps")
 
-    k.nmap("s", function()
+    k.mode_map({ "n", "x", "o" }, "s", function()
       require("leap").leap({ target_windows = { vim.api.nvim_get_current_win() } })
     end)
   end,

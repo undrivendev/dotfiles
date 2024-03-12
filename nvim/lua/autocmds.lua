@@ -1,5 +1,5 @@
 local M = {}
-function M.load_autocommands()
+function M.load_autocmds()
   -- https://neovim.io/doc/user/lua-guide.html#lua-guide-autocommand-create
 
   -- Automatically highlight yanked text
