@@ -27,6 +27,7 @@
     ~/.config/pypoetry/config.toml: poetry-config.toml
     ~/.nvm-init: nvm-init
     ~/.ng: ng
+    ~/.config/lazygit/config.yml: lazygit.yml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
