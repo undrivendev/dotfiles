@@ -28,6 +28,7 @@
     ~/.nvm-init: nvm-init
     ~/.ng: ng
     ~/.config/lazygit/config.yml: lazygit.yml
+    ~/.config/doom/: doom-emacs
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
