@@ -1,1 +1,11 @@
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/share/JetBrains/Toolbox/scripts:$HOME/.dotnet/tools"
+# local bin
+export PATH="$PATH:$HOME/.local/bin"
+
+# JetBrains scripts
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
+
+# dotnet tools
+export PATH="$PATH:$HOME/.dotnet/tools"
+
+# Doom emacs
+export PATH="$PATH:$HOME/.config/emacs/bin"
