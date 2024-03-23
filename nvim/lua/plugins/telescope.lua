@@ -7,7 +7,7 @@ local M = {
       local k = require("../keymaps")
       local builtin = require("telescope.builtin")
 
-      k.nmap("<C-p>", builtin.find_files)
+      k.nmap("<leader>.", builtin.find_files)
       k.nmap("<leader>fg", builtin.live_grep)
     end,
   },

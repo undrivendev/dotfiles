@@ -9,7 +9,7 @@ local M = {
   config = function()
     local k = require("../keymaps")
     require("neo-tree").setup()
-    k.nmap("<C-n>", "<cmd>Neotree toggle<CR>")
+    k.nmap("<leader>n", "<cmd>Neotree toggle<CR>")
   end,
 }
 
