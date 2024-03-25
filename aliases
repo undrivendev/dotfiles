@@ -4,7 +4,10 @@ fi
 
 command -v paru &> /dev/null && alias yay=paru
 
+alias nv=nvim
 alias vim=nvim
 alias vi=nvim
-alias emacs="emacsclient -c -a 'emacs'"
+
+alias em=emacs
+alias emacs="emacsclient -c -a 'emacs' &"
 alias lg=lazygit
