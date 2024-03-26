@@ -75,3 +75,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(after! org
+  (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
+  (setq org-refile-allow-creating-parent-nodes 'confirm))
+
