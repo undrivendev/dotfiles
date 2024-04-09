@@ -78,5 +78,7 @@
 
 (after! org
   (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
-  (setq org-refile-allow-creating-parent-nodes 'confirm))
-
+  (setq org-refile-use-outline-path 'file)
+  (setq org-refile-allow-creating-parent-nodes 'confirm)
+  (setq org-log-done 'time)
+  (setq calendar-week-start-day 1))
