@@ -81,4 +81,8 @@
   (setq org-refile-use-outline-path 'file)
   (setq org-refile-allow-creating-parent-nodes 'confirm)
   (setq org-log-done 'time)
+  (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "LOOP(r)" "STRT(s)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+                            (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")))
+  (setq org-todo-keywords-for-agenda '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "LOOP(r)" "STRT(s)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+                            (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")))
   (setq calendar-week-start-day 1))
