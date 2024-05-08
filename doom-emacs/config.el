@@ -85,6 +85,9 @@
   (setq org-todo-keywords-for-agenda '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "REPEAT(r)" "STRT(s)" "WAIT(w)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")))
   (setq org-log-into-drawer 't)
   (setq org-todo-repeat-to-state 'REPEAT)
-  (setq org-agenda-custom-commands
-        '(("n" todo "NEXT|STRT|WAIT")))
   (setq calendar-week-start-day 1))
+  (setq org-agenda-custom-commands
+       '(("n" "What's Next?"
+         ((agenda "" ((org-agenda-span 7)))
+          (todo "PROJ|STRT|WAIT|NEXT")))
+        ))
