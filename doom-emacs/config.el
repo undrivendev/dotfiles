@@ -8,6 +8,8 @@
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
+(setq user-full-name "Luca Dalla Valle"
+      user-mail-address "luca.dallavalle@outlook.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -23,7 +25,8 @@
 ;;
 ;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'regular))
+(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "IBM Plex Sans" :size 16))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -84,10 +87,29 @@
   (setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "REPEAT(r)" "STRT(s)" "WAIT(w)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")))
   (setq org-todo-keywords-for-agenda '((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "REPEAT(r)" "STRT(s)" "WAIT(w)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")))
   (setq org-log-into-drawer 't)
+  (setq org-id-link-to-org-use-id 'use-existing)
   (setq org-todo-repeat-to-state 'REPEAT)
   (setq calendar-week-start-day 1))
+  (setq doom-modeline-enable-word-count 't)
   (setq org-agenda-custom-commands
        '(("n" "What's Next?"
          ((agenda "" ((org-agenda-span 7)))
           (todo "PROJ|STRT|WAIT|NEXT")))
         ))
+
+(use-package! org-pandoc-import :after org)
+
+;; Custom functions.
+(defun my/org-reformat-buffer ()
+  (interactive)
+  (when (y-or-n-p "Really format current buffer? ")
+    (let ((document (org-element-interpret-data (org-element-parse-buffer))))
+      (erase-buffer)
+      (insert document)
+      (goto-char (point-min)))))
+
+(defun my/org-add-ids-to-headlines-in-file ()
+  "Add ID properties to all headlines in the current file
+which do not already have one."
+  (interactive)
+  (org-map-entries 'org-id-get-create))
