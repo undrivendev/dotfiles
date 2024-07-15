@@ -1,0 +1,17 @@
+if command -v fzf &> /dev/null; then
+    # Set up fzf key bindings and fuzzy completion
+    source <(fzf --zsh)
+
+    export FZF_DEFAULT_COMMAND="fd --type file"
+
+    # If bat is installed use that for preview, otherwise cat
+    if command -v bat &> /dev/null; then
+        alias fzp="fzf -m --preview='bat --color=always {}'"
+    else
+        alias fzp="fzf -m --preview='cat {}'"
+    fi
+
+    command -v nvim &> /dev/null && alias fzn="nvim \$(fzp)"
+    command -v emacsclient &> /dev/null && alias fze="emacsclient -q -n \$(fzp)"
+fi
+

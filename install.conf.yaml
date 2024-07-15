@@ -27,6 +27,7 @@
     ~/.config/pypoetry/config.toml: poetry-config.toml
     ~/.nvm-init: nvm-init
     ~/.ng: ng
+    ~/.fzf: fzf
     ~/.config/lazygit/config.yml: lazygit.yml
     ~/.config/doom/: doom-emacs
 
