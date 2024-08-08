@@ -4,6 +4,8 @@
 	signingkey = BF876EB718CA43E2
 [init]
 	defaultBranch = main
+[rebase]
+  autosquash = true
 [commit]
 	gpgsign = true
 [gpg]
