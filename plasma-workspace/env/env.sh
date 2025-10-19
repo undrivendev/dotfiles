@@ -9,3 +9,5 @@ export QT_QPA_PLATFORM=wayland
 # SSH askpass
 export SSH_ASKPASS='/usr/bin/ksshaskpass'
 export SSH_ASKPASS_REQUIRE=prefer
+
+export VDPAU_DRIVER=radeonsi
